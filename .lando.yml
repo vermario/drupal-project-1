@@ -46,9 +46,7 @@ services:
         XDEBUG_MODE:
         # Support debugging Drush with XDEBUG 3.
         PHP_IDE_CONFIG: "serverName=appserver"
-        # SimpleTest settings.
-        SIMPLETEST_BASE_URL: "http://appserver_nginx"
-        SIMPLETEST_DB: "sqlite://localhost/tmp/db.sqlite"
+        # PHPUnit settings. @see: .lando/phpunit.sh
         MINK_DRIVER_ARGS_WEBDRIVER: '["chrome", {"browserName":"chrome","chromeOptions":{"args":["--disable-gpu","--headless"]}}, "http://chrome:9515"]'
   chrome:
     type: compose
